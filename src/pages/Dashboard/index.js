@@ -17,7 +17,7 @@ export default function Dashboard() {
       setAppointments(response.data);
     }
     loadAppointments();
-  });
+  }, []);
 
   async function handleCancel(id) {
     const response = await api.delete(`appointments/${id}`);
